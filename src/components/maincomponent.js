@@ -3,8 +3,8 @@ import Home from "./HomeComponent";
 import Menu from "./menucomponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
-import {LEADERS} from '../shared/leaders'
-import {DISHES} from '../shared/dishes'
+import { LEADERS } from "../shared/leaders";
+import { DESSERTS, DISHES, PIZZA, SALADS } from "../shared/dishes";
 import "../App.css";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import Contact from "./ContactComponent";
@@ -13,13 +13,8 @@ import Aboutus from "./AboutComponent";
 import { connect } from "react-redux";
 import {
   postComment,
-  fetchComments,
-  fetchDishes,
-  fetchPromos,
-  fetchLeaders,
   postFeedback,
 } from "../redux/actionCreators";
-import { actions } from "react-redux-form";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const mapStateToProps = (state) => {
@@ -56,21 +51,6 @@ const mapDispatchToProps = (dispatch) => ({
       )
     );
   },
-  fetchDishes: () => {
-    dispatch(fetchDishes());
-  },
-  resetFeedbackForm: () => {
-    dispatch(actions.reset("feedback"));
-  },
-  fetchComments: () => {
-    dispatch(fetchComments());
-  },
-  fetchPromos: () => {
-    dispatch(fetchPromos());
-  },
-  fetchLeaders: () => {
-    dispatch(fetchLeaders());
-  },
 });
 
 class Main extends Component {
@@ -100,7 +80,9 @@ class Main extends Component {
   };
   render() {
     const HomePage = () => {
-      return <Home item={this.item} dessert={this.dessert} coffee={this.coffee} />;
+      return (
+        <Home item={this.item} dessert={this.dessert} coffee={this.coffee} />
+      );
     };
 
     const DishWithId = ({ match }) => {
@@ -114,12 +96,54 @@ class Main extends Component {
           comments={this.props.comments.comments.filter(
             (comment) => comment.dishId === parseInt(match.params.dishId, 10)
           )}
-          postComment={this.props.postComment}
-          commentsErrMess={this.props.promotions.errMess}
+        />
+      );
+    };
+    const pizzaWithId = ({ match }) => {
+      return (
+        <DishDetail
+          dish={
+            PIZZA.filter(
+              (one) => one.id === parseInt(match.params.pizzaId, 10)
+            )[0]
+          }
+          comments={this.props.comments.comments.filter(
+            (comment) => comment.dishId === parseInt(match.params.pizzaId, 10)
+          )}
         />
       );
     };
 
+    const saladWithId = ({ match }) => {
+      return (
+        <DishDetail
+          dish={
+            SALADS.filter(
+              (one) => one.id === parseInt(match.params.saladId, 10)
+            )[0]
+          }
+          comments={this.props.comments.comments.filter(
+            (comment) => comment.dishId === parseInt(match.params.saladId, 10)
+          )}
+        />
+      );
+    };
+
+        const dessertWithId = ({ match }) => {
+          return (
+            <DishDetail
+              dish={
+                DESSERTS.filter(
+                  (one) => one.id === parseInt(match.params.dessertId, 10)
+                )[0]
+              }
+              comments={this.props.comments.comments.filter(
+                (comment) =>
+                  comment.dishId === parseInt(match.params.dessertId, 10)
+              )}
+            />
+          );
+        };
     return (
       <div>
         <Header />
@@ -134,9 +158,20 @@ class Main extends Component {
               <Route
                 exact
                 path="/menu"
-                component={() => <Menu dishes={DISHES} />}
+                component={() => (
+                  <Menu
+                    dishes={DISHES}
+                    pizza={PIZZA}
+                    salad={SALADS}
+                    dessert={DESSERTS}
+                  />
+                )}
               />
+
               <Route path="/menu/:dishId">{DishWithId}</Route>
+              <Route path="/pizza/:pizzaId">{pizzaWithId}</Route>
+              <Route path="/salad/:saladId">{saladWithId}</Route>
+              <Route path="/dessert/:dessertId">{dessertWithId}</Route>
               <Route exact path="/contactus">
                 <Contact
                   resetFeedbackForm={this.props.resetFeedbackForm}

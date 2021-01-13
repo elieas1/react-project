@@ -1,54 +1,72 @@
-.row-header{
-    margin:0px auto;
-    padding:0px auto;
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
 }
 
 .row-content {
-    margin:0px auto;
-    padding: 50px 0px 50px 0px;
-    border-bottom: 1px ridge;
-    min-height:400px;
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
 }
 
-.footer{
-    background-color: #D1C4E9;
-    margin:0px auto;
-    padding: 20px 0px 20px 0px;
+.footer {
+  background-color: #d1c4e9;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
 }
 .jumbotron {
-    padding:70px 30px 70px 30px;
-    margin:0px auto;
-    background: #9575CD ;
-    color:floralwhite;
+  padding: 70px 30px 70px 30px;
+  margin: 0px auto;
+  background: rgb(57, 57, 189);
+  color: floralwhite;
 }
 
-address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
 }
 
 .navbar-dark {
-    background-color: #512DA8;
+  background-color: #19178a;
 }
-.page-enter{
-    opacity: 0.01;
-    transform: translateX(-100%);
-}
-
-.page-enter-active{
-    opacity: 1;
-    transform: translateX(0%);
-    transition: all 300ms ease-in;
+.page-enter {
+  opacity: 0.01;
+  transform: translateX(-100%);
 }
 
-.page-exit{
-    opacity: 1;
-    transform: translateX(0%);
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms ease-in;
 }
 
-.page-exit-active{
-    opacity: 0.01;
-    transform: translateX(100%);
-    transition: all 300ms ease-out;
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0.01;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
+
+.activeTab {
+  border-bottom: 2px solid#19178A;
+}
+
+.menuButton{
+  padding: 15px;
+  background-color: #19178A;
+  text-align: center;
+  border-radius: 10% ;
+  color: white;
+  margin-top: 40px
+}
+
+.menuButton:hover {
+  letter-spacing: 1px;
+  transition: 200ms;
 }

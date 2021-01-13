@@ -13,21 +13,21 @@ import { baseUrl } from "../shared/baseUrl";
 import { Fade, Stagger } from "react-animation-components";
 
 const RenderLeader = (props) => {
-    const leaders = props.props.map((leader) => {
-      return (
-          <Fade in>
-            <Media>
-              <Media body>
-                <Media heading>{leader.name}</Media>
-                <p>{leader.designation}</p>
-                <p>{leader.description}</p>
-              </Media>
-            </Media>
-          </Fade>
-      );
-    });
-    return leaders;
-  }
+  const leaders = props.props.map((leader) => {
+    return (
+      <Fade in>
+        <Media>
+          <Media body>
+            <Media heading>{leader.name}</Media>
+            <p>{leader.designation}</p>
+            <p>{leader.description}</p>
+          </Media>
+        </Media>
+      </Fade>
+    );
+  });
+  return leaders;
+};
 
 function About(props) {
   return (
@@ -48,19 +48,14 @@ function About(props) {
         <div className="col-12 col-md-6">
           <h2>Our History</h2>
           <p>
-            Started in 2010, our restaurant quickly established itself as
-            a culinary icon par excellence in Lebanon. With its unique brand
-            of world fusion cuisine that can be found nowhere else, it enjoys
-            patronage from the A-list clientele in Lebanon. Featuring four of
-            the best three-star chefs in the world, you never know what
-            will arrive on your plate the next time you visit us.
+            Established in 2015, our restaurant quickly established itself as a
+            great success in Lebanon. With its unique brand of world cuisine and
+            chefs that cannot be found anywhere else, it enjoys patronage from
+            the A-list clientele in Lebanon. Featuring the best three-star chefs
+            in the world, you never know what will arrive on your plate the next
+            time you visit us.
           </p>
-          <p>
-            The restaurant traces its humble beginnings to{" "}
-            <em>The Frying Pan</em>, a successful chain started by our CEO, Mr.
-            Peter Pan, that featured for the first time the world's best
-            cuisines in a pan.
-          </p>
+
         </div>
         <div className="col-12 col-md-5">
           <Card>
@@ -70,13 +65,13 @@ function About(props) {
             <CardBody>
               <dl className="row p-1">
                 <dt className="col-6">Started</dt>
-                <dd className="col-6">3 Feb. 2010</dd>
+                <dd className="col-6">13 Aug. 2015</dd>
                 <dt className="col-6">Major Stake Holder</dt>
-                <dd className="col-6">LB Fine Foods Inc.</dd>
+                <dd className="col-6">LB Food Inc.</dd>
                 <dt className="col-6">Last Year's Turnover</dt>
-                <dd className="col-6">$1,250,375</dd>
+                <dd className="col-6">$1,359,999</dd>
                 <dt className="col-6">Employees</dt>
-                <dd className="col-6">40</dd>
+                <dd className="col-6">100</dd>
               </dl>
             </CardBody>
           </Card>
@@ -86,31 +81,14 @@ function About(props) {
             <CardBody className="bg-faded">
               <blockquote className="blockquote">
                 <p className="mb-0">
-                  You better cut the pizza in four pieces because I'm not hungry
-                  enough to eat six.
+                  The only thing I like better than talking about food is eating.
                 </p>
                 <footer className="blockquote-footer">
-                  Yogi Berra,
-                  <cite title="Source Title">
-                    The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books,
-                    2014
-                  </cite>
+                  John Walters
                 </footer>
               </blockquote>
             </CardBody>
           </Card>
-        </div>
-      </div>
-      <div className="row row-content">
-        <div className="col-12">
-          <h2>Corporate Leadership</h2>
-        </div>
-        <div className="col-12">
-          <Stagger in>
-            <Media list>
-              <RenderLeader props={props.leaders} />
-            </Media>
-          </Stagger>
         </div>
       </div>
     </div>

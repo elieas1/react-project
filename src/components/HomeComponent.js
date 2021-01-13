@@ -13,10 +13,7 @@ import {FadeTransform} from 'react-animation-components'
 
 const RenderCard = ({ item}) => {
     return (
-      <FadeTransform
-        in
-        transformProps={{ exitTransform: "scale(0.5) translateY(-50%)" }}
-      >
+
         <Card>
           <CardImg src={item.image} alt={item.name} />
           <CardBody>
@@ -27,7 +24,7 @@ const RenderCard = ({ item}) => {
             <CardText>{item.description}</CardText>
           </CardBody>
         </Card>
-      </FadeTransform>
+
     );
   }
 

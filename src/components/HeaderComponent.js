@@ -27,6 +27,12 @@ class Header extends React.Component {
     };
     this.toggleModal = this.toggleModal.bind(this);
   }
+  navClose = () => {
+    this.setState((prevState) => {
+      return { ...prevState, isNavOpen: false };
+    });
+  };
+
   handleLogin = (event) => {
     this.toggleModal();
     alert(
@@ -46,6 +52,7 @@ class Header extends React.Component {
     }));
   };
   toggleModal() {
+    console.log(window.location.pathname);
     this.setState({ isModalOpen: !this.state.isModalOpen });
   }
   render() {
@@ -54,28 +61,32 @@ class Header extends React.Component {
         <Navbar dark expand="md">
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className="mr-auto" href="/">
-              <img
-                src="assets/images/logo.png"
-                height="30"
-                width="41"
-                alt="Lebanese Restaurant"
-              />
-            </NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <NavItem>
-                  <NavLink className="nav-link" to="/home">
+                  <NavLink
+                    onClick={this.navClose}
+                    className="nav-link"
+                    to="/home"
+                  >
                     <span className="fa fa-home fa-lg"></span>Home
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/aboutus">
+                  <NavLink
+                    onClick={this.navClose}
+                    className="nav-link"
+                    to="/aboutus"
+                  >
                     <span className="fa fa-info fa-lg"></span>About Us
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/menu">
+                  <NavLink
+                    onClick={this.navClose}
+                    className="nav-link"
+                    to="/menu"
+                  >
                     <span
                       className="fa
                    fa-list fa-lg"
@@ -84,7 +95,11 @@ class Header extends React.Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/contactus">
+                  <NavLink
+                    onClick={this.navClose}
+                    className="nav-link"
+                    to="/contactus"
+                  >
                     <span
                       className="fa
                    fa-address-card fa-lg"
@@ -108,11 +123,14 @@ class Header extends React.Component {
             <div className="row row-header">
               <div className="col-12 col-sm-6">
                 <h1>Lebanese Restaurant</h1>
-                <p>
-                  We take inspiration from the World's best cuisines, and create
-                  a unique fusion exxperience. Our lipsmacking creations will
-                  tickle your culinary senses
-                </p>
+                <p>We guarantee you an unforgettable experience</p>
+              </div>
+              <div className="col-md-6 col-sm-12">
+                {window.location.pathname.indexOf("/home") === 0 && (
+                  <NavLink className="nav-link navlink" to="/menu">
+                    <div className="menuButton">Check Our Menu</div>
+                  </NavLink>
+                )}
               </div>
             </div>
           </div>
