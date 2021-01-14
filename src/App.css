@@ -1,6 +1,26 @@
-.row-header {
-  margin: 0px auto;
-  padding: 0px auto;
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  margin: auto;
+  padding: 30px;
+}
+
+.header h1 {
+  text-align: center;
+}
+.header p {
+  text-align: center;
 }
 
 .row-content {
@@ -10,16 +30,25 @@
   min-height: 400px;
 }
 
+address{
+  color:white !important
+}
+
 .footer {
-  background-color: #d1c4e9;
+  background-color:#0C0704;
+  color:white;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
 }
-.jumbotron {
-  padding: 70px 30px 70px 30px;
-  margin: 0px auto;
-  background: rgb(57, 57, 189);
+
+.jumbotrone {
+  background: url(https://thewallpaper.co/wp-content/uploads/2020/08/restaurant-wide-hd-wallpaper-download-restaurant-photos-free-best-backgrounds-hd-free-images-widescreen-1920x1200-1-1200x750.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: floralwhite;
+  height: 60vh;
+  width: 100vw;
 }
 
 address {
@@ -28,8 +57,13 @@ address {
   color: #0f0f0f;
 }
 
+.Welcome {
+  padding: 30px;
+  text-align: center;
+}
+
 .navbar-dark {
-  background-color: #19178a;
+  background-color: rgba(150, 150, 150, 0);
 }
 .page-enter {
   opacity: 0.01;
@@ -57,16 +91,98 @@ address {
   border-bottom: 2px solid#19178A;
 }
 
-.menuButton{
+.menuButton {
   padding: 15px;
-  background-color: #19178A;
+  background-color: rgba(150, 150, 150, 0.5);
   text-align: center;
-  border-radius: 10% ;
   color: white;
-  margin-top: 40px
+  font-size: 1.2rem;
+  width: 200px;
+  transition: 200ms;
 }
 
-.menuButton:hover {
-  letter-spacing: 1px;
+.menuButton2 {
+  padding: 15px;
+  background-color: rgba(150, 150, 150, 0.5);
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  width: 200px;
   transition: 200ms;
+}
+
+.foodImage{
+  transform: rotate(340deg);
+  width: 100%;
+}
+
+.foodCard{
+  padding: 30px;
+}
+
+.foodDesc{
+  font-size: 1.2rem;
+}
+
+.staffImage{
+    transform: rotate(20deg);
+  width: 100%;
+}
+
+.menuButton:hover,
+.menuButton2:hover {
+  letter-spacing: 1px;
+}
+
+.review{
+  padding: 10px;
+  background-color: rgba(150, 150, 150, 0.1);
+  width: 100%;
+  margin: 10px;
+}
+
+.reserve {
+  border: 1px solid #007bff;
+  width: 50vw;
+}
+
+.reserveheader {
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.first{
+  margin-top: 70px;
+}
+
+#reserve {
+  padding: 20px;
+}
+
+.star{
+  color: orange
+}
+
+.smoking {
+  border: 2px solid #007bff;
+  transition: 100ms;
+}
+
+.smoking:hover {
+  background-color: #007bffad;
+  color: white;
+  transition-timing-function: linear;
+}
+
+.checked {
+  background-color: #007bffad;
+  color: white;
+  transition-timing-function: linear;
+}
+
+.reserveContainer {
+  padding: 30px;
 }

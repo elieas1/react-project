@@ -71,7 +71,7 @@ function About(props) {
                 <dt className="col-6">Last Year's Turnover</dt>
                 <dd className="col-6">$1,359,999</dd>
                 <dt className="col-6">Employees</dt>
-                <dd className="col-6">100</dd>
+                <dd className="col-6">40</dd>
               </dl>
             </CardBody>
           </Card>

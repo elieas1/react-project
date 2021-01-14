@@ -57,31 +57,11 @@ class Main extends Component {
   constructor() {
     super();
   }
-  item = {
-    image:
-      "https://images.unsplash.com/photo-1479832912902-77089f02b1d2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBsYXRlJTIwb2YlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    name: "Pasta",
-    description: "Delicious Pasta Plate",
-    designation: "Hot",
-  };
-  dessert = {
-    image:
-      "https://images.unsplash.com/photo-1512684609856-01f6e503a294?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNoZWVzZSUyMGNha2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    name: "Dessert",
-    description: "Cheese Cake",
-    designation: "Hot",
-  };
-  coffee = {
-    image:
-      "https://images.unsplash.com/photo-1503481766315-7a586b20f66d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    name: "Coffee",
-    description: "Cup of Coffee",
-    designation: "Hot",
-  };
+
   render() {
     const HomePage = () => {
       return (
-        <Home item={this.item} dessert={this.dessert} coffee={this.coffee} />
+        <Home/>
       );
     };
 
@@ -148,13 +128,8 @@ class Main extends Component {
       <div>
         <Header />
         <TransitionGroup>
-          <CSSTransition
-            key={this.props.location.key}
-            classNames="page"
-            timeout={300}
-          >
-            <Switch>
-              <Route path="/home" component={HomePage} />
+          <Switch>
+            <Route path="/home" component={HomePage} />
               <Route
                 exact
                 path="/menu"
@@ -183,7 +158,6 @@ class Main extends Component {
               </Route>
               <Redirect to="/home" />
             </Switch>
-          </CSSTransition>
         </TransitionGroup>
         <Footer />
       </div>

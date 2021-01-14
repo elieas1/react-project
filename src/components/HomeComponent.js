@@ -1,53 +1,22 @@
-import React from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-} from "reactstrap";
-import { Loading } from "./LoadingComponene";
-import { baseUrl } from "../shared/baseUrl";
-import {FadeTransform} from 'react-animation-components'
+import React, { useRef } from "react";
 
-const RenderCard = ({ item}) => {
-    return (
-
-        <Card>
-          <CardImg src={item.image} alt={item.name} />
-          <CardBody>
-            <CardTitle>{item.name}</CardTitle>
-            {item.designation ? (
-              <CardSubtitle>{item.designation}</CardSubtitle>
-            ) : null}
-            <CardText>{item.description}</CardText>
-          </CardBody>
-        </Card>
-
-    );
-  }
+import Reserve from "./reserve";
+import Foods from "./Foods";
+import Staff from "./Staff";
+import Reviews from "./Reviews";
 
 function Home(props) {
   return (
     <div className="container">
-      <div className="row align-items-start">
-        <div className="col-12 col-md m-1">
-          <RenderCard
-            item={props.item}
-          />
-        </div>
-        <div className="col-12 col-md m-1">
-          <RenderCard
-            item={props.dessert}
-          />
-        </div>
-        <div className="col-12 col-md m-1">
-          <RenderCard
-            item={props.coffee}
-          />
-        </div>
+      <div className="Welcome">
+        <h1>Welcome to Dine & Wine Restaurant</h1>
+        <hr />
       </div>
+      <Foods />
+      <Staff />
+      <Reviews />
+      <hr />
+      <Reserve />
     </div>
   );
 }

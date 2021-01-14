@@ -80,7 +80,7 @@ const Footer = ()=>{
           </div>
           <div className="row justify-content-center">
             <div className="col-auto">
-              <p>© Copyright 2020 Lebanese Restaurant</p>
+              <p>© Copyright 2020 WINE & DINE</p>
             </div>
           </div>
         </div>
