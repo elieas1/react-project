@@ -2,10 +2,14 @@ import React from 'react'
 
 function Staff() {
     return (
-      <div>
+      <div className="container foodCard">
         <div className="row">
           <div className="foodDesc col-12 col-md-6 mt-5">
-            We know that our customers' experience is greatly affected by the quality of our staff members, that is  why we have chosen the best candidates for this position. Our staff will ensure that you have a wonderful experience, from interaction to food serving, they have it all covered.
+            We know that our customers' experience is greatly affected by the
+            quality of our staff members, that is why we have chosen the best
+            candidates for this position. Our staff will ensure that you have a
+            wonderful experience, from interaction to food serving, they have it
+            all covered.
           </div>
           <div className="col-12 col-md-6 mt-5 mt-md-0">
             <img

@@ -37,7 +37,7 @@ const Footer = ()=>{
                 <i className="fa fa-fax fa-lg"></i>: +961 12345678
                 <br />
                 <i className="fa fa-envelope fa-lg"></i>:{" "}
-                <a href="mailto:restaurant@food.net">restaurant@food.net</a>
+                <a href="mailto:restaurant@food.net">dineandwine@food.net</a>
               </address>
             </div>
             <div className="col-12 col-sm-4 align-self-center">
@@ -80,7 +80,7 @@ const Footer = ()=>{
           </div>
           <div className="row justify-content-center">
             <div className="col-auto">
-              <p>© Copyright 2020 WINE & DINE</p>
+              <p>© Copyright 2020 DINE & WINE</p>
             </div>
           </div>
         </div>

@@ -10,8 +10,7 @@ const Reserve = () => {
     e.target.parentNode.className = e.target.parentNode.className + " checked";
   };
   return (
-    <div className="reserveContainer container">
-      <div className="reserve m-auto">
+      <div className="reserve">
         <div className="reserveheader">Reservation</div>
         <form id="reserve" action='/home'>
           <div class="row form-group">
@@ -97,7 +96,7 @@ const Reserve = () => {
           </div>
         </form>
       </div>
-    </div>
+
   );
 };
 
