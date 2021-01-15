@@ -47,8 +47,7 @@ address:not(.contact){
   background-size: cover;
   background-position: center;
   color: floralwhite;
-  height: 50%;
-  width: 100vw;
+
 }
 
 address {
@@ -107,6 +106,13 @@ address {
   width: 20vw;
 }
 
+.emptyDiv{
+  padding: 15px;
+  text-align: center;
+  width: 20vw;
+  height: 80px;
+}
+
 .foodImage{
   transform: rotate(340deg);
   width: 100%;
@@ -125,8 +131,7 @@ address {
   width: 100%;
 }
 
-.menuButton:hover,
-.menuButton2:hover {
+.menuButton:hover{
   letter-spacing: 1px;
 }
 

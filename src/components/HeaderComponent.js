@@ -123,7 +123,7 @@ class Header extends React.Component {
                 <h1 className='logo'>DINE & WINE</h1>
                 <p className='logotext'>We guarantee you an unforgettable experience</p>
                 <div className='d-none d-lg-flex' style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
-                  {window.location.pathname.indexOf("/home") === 0 && (
+                  {window.location.pathname.indexOf("/home") === 0 ? (
                     <>
                       <NavLink className="nav-link navlink" to="/menu">
                         <div className="menuButton">Check Our Menu</div>
@@ -132,7 +132,7 @@ class Header extends React.Component {
                         <div className="menuButton">Reserve Table</div>
                       </a>
                     </>
-                  )}
+                  ):<div className='emptyDiv'></div>}
                 </div>
               </div>
             </div>

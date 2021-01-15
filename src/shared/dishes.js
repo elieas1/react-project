@@ -95,8 +95,7 @@ export const PIZZA = [
     label: "",
     price: "2.99",
     featured: false,
-    description:
-      "Ultra Cheesy delicious pizza topped with pepperoni",
+    description: "Ultra Cheesy delicious pizza topped with pepperoni",
   },
   {
     id: 2,
@@ -138,7 +137,7 @@ export const PIZZA = [
     id: 5,
     name: "Hawaiian Pizza",
     image:
-      "https://thumbs.dreamstime.com/b/hawaiian-pizza-old-board-58339431.jpg",
+      "https://media.istockphoto.com/photos/hawaiian-pizza-with-pineapple-and-ham-on-silver-pizza-pan-picture-id182864540?k=6&m=182864540&s=612x612&w=0&h=aLOMJXy95gj4kx7OfeXeOMkZ9k0jAsBGUNwtB0ORQUk=",
     category: "Pizza",
     label: "",
     price: "9.99",

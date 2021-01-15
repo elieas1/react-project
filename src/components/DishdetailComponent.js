@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import {
   Card,
   CardImg,
@@ -53,9 +53,16 @@ if (props.dish != null) {
 }
 
 function RenderDish(props) {
+
+  const ref = useRef()
+
+  useEffect(()=>{
+    ref.current.scrollIntoView()
+  },[])
+
   return (
     <React.Fragment>
-      <div className="col-12 col-md-5 m-1">
+      <div className="col-12 col-md-5 m-1" id='dish' ref={ref}>
         <FadeTransform
           in
           transformProps={{ exitTransform: "scale(0.5) translateY(-50%)" }}
@@ -195,7 +202,6 @@ class CommentForm extends React.Component {
 }
 
 function RenderComments(props) {
-  if (props.comments) {
     const comments = props.comments.map((comment) => {
       return (
         <ul className="list-unstyled" key={comment.id}>
@@ -228,10 +234,7 @@ function RenderComments(props) {
             />
         </div>
       </div>
-    );
-  } else {
-    return <div></div>;
-  }
+    )
 }
 
-export default DishDetail;
+export default DishDetail

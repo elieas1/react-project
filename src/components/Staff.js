@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardImgOverlay } from "reactstrap";
+import { Card, CardBody, CardImg} from "reactstrap";
 
 function Staff() {
   return (
