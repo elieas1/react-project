@@ -54,7 +54,7 @@ class Contact extends React.Component {
           </div>
           <div className="col-12 col-sm-4 offset-sm-1">
             <h5>Our Address</h5>
-            <address>
+            <address class='contact'>
               Street
               <br />
               Beirut

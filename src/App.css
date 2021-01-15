@@ -30,7 +30,7 @@ body {
   min-height: 400px;
 }
 
-address{
+address:not(.contact){
   color:white !important
 }
 
@@ -179,8 +179,12 @@ address {
   transition-timing-function: linear;
 }
 
-@media screen and (min-width:768px){
+.logo{
+  font-size: 10vw;
+}
+
+@media screen and (min-width:768px) and ( max-width:1366px){
   .logo{
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }

@@ -119,10 +119,10 @@ class Header extends React.Component {
           </Navbar>
           <div className="container">
             <div className="row">
-              <div className=" col-12 header mt-lg-5 mt-xl-0">
+              <div className=" col-12 header">
                 <h1 className='logo'>DINE & WINE</h1>
-                <p>We guarantee you an unforgettable experience</p>
-                <div className='d-none d-md-flex' style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
+                <p className='logotext'>We guarantee you an unforgettable experience</p>
+                <div className='d-none d-lg-flex' style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
                   {window.location.pathname.indexOf("/home") === 0 && (
                     <>
                       <NavLink className="nav-link navlink" to="/menu">
