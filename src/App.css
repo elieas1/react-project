@@ -65,6 +65,8 @@ address {
 .navbar-dark {
   background-color: rgba(150, 150, 150, 0);
 }
+
+
 .page-enter {
   opacity: 0.01;
   transform: translateX(-100%);
@@ -91,24 +93,18 @@ address {
   border-bottom: 2px solid#19178A;
 }
 
+.menuType{
+  padding: 0;
+}
+
 .menuButton {
   padding: 15px;
   background-color: rgba(150, 150, 150, 0.5);
   text-align: center;
   color: white;
   font-size: 1.2rem;
-  width: 200px;
   transition: 200ms;
-}
-
-.menuButton2 {
-  padding: 15px;
-  background-color: rgba(150, 150, 150, 0.5);
-  text-align: center;
-  color: white;
-  font-size: 1.2rem;
-  width: 200px;
-  transition: 200ms;
+  width: 20vw;
 }
 
 .foodImage{
@@ -183,3 +179,8 @@ address {
   transition-timing-function: linear;
 }
 
+@media screen and (min-width:768px){
+  .logo{
+    font-size: 6rem;
+  }
+}

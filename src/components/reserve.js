@@ -12,7 +12,7 @@ const Reserve = () => {
   return (
       <div className="reserve">
         <div className="reserveheader">Reservation</div>
-        <form id="reserve" action='/home'>
+        <form id="reserve" action='/home' onSubmit={(e)=>{e.preventDefault(); alert('reservation complete')}}>
           <div class="row form-group">
             <div class="col-12 col-sm mb-2">
               <strong>Name And Tel. Number</strong>

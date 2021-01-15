@@ -119,17 +119,17 @@ class Header extends React.Component {
           </Navbar>
           <div className="container">
             <div className="row">
-              <div className=" col-12 header">
-                <h1>DINE & WINE</h1>
+              <div className=" col-12 header mt-lg-5 mt-xl-0">
+                <h1 className='logo'>DINE & WINE</h1>
                 <p>We guarantee you an unforgettable experience</p>
-                <div style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
+                <div className='d-none d-md-flex' style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
                   {window.location.pathname.indexOf("/home") === 0 && (
                     <>
                       <NavLink className="nav-link navlink" to="/menu">
                         <div className="menuButton">Check Our Menu</div>
                       </NavLink>
                       <a className="nav-link navlink" href="#reserve">
-                        <div className="menuButton2">Reserve Table</div>
+                        <div className="menuButton">Reserve Table</div>
                       </a>
                     </>
                   )}

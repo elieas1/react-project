@@ -12,8 +12,10 @@ function Home(props) {
         <h1>Welcome to Dine & Wine Restaurant</h1>
         <hr />
       </div>
-      <Foods />
-      <Staff />
+      <div className="row m-auto">
+        <Foods />
+        <Staff />
+      </div>
       <Reviews />
       <hr />
       <Reserve />

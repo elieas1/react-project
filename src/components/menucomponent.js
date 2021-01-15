@@ -98,14 +98,15 @@ const Menu = (props) => {
           </BreadcrumbItem>
           <BreadcrumbItem active>Menu</BreadcrumbItem>
         </Breadcrumb>
-        <div className="col-12">
-          <Nav tabs>
+      </div>
+      <Nav tabs>
+        <div className="row">
+          <div className="col menuType">
             <NavItem
               onClick={() => setType("Platters")}
               className={type === "Platters" && "activeTab"}
               style={{
                 textAlign: "center",
-                width: "100px",
                 padding: "10px 15px",
                 borderRight: "2px solid lightgray",
                 cursor: "pointer",
@@ -113,12 +114,13 @@ const Menu = (props) => {
             >
               Platters
             </NavItem>
+          </div>
+          <div className="col menuType">
             <NavItem
               onClick={() => setType("Pizza")}
               className={type === "Pizza" && "activeTab"}
               style={{
                 textAlign: "center",
-                width: "100px",
                 padding: "10px 15px",
                 borderRight: "2px solid lightgray",
                 cursor: "pointer",
@@ -126,12 +128,13 @@ const Menu = (props) => {
             >
               Pizza
             </NavItem>
+          </div>
+          <div className="col menuType">
             <NavItem
               onClick={() => setType("Salads")}
               className={type === "Salads" && "activeTab"}
               style={{
                 textAlign: "center",
-                width: "100px",
                 padding: "10px 15px",
                 borderRight: "2px solid lightgray",
                 cursor: "pointer",
@@ -139,12 +142,13 @@ const Menu = (props) => {
             >
               Salads
             </NavItem>
+          </div>
+          <div className="col menuType">
             <NavItem
               onClick={() => setType("Desserts")}
               className={type === "Desserts" && "activeTab"}
               style={{
                 textAlign: "center",
-                width: "100px",
                 padding: "10px 15px",
                 borderRight: "2px solid lightgray",
                 cursor: "pointer",
@@ -152,9 +156,10 @@ const Menu = (props) => {
             >
               Desserts
             </NavItem>
-          </Nav>
+          </div>
         </div>
-      </div>
+      </Nav>
+
       <div className="col-12"></div>
       <div className="row">{type === "Pizza" && pizzamenu}</div>
       <div className="row">{type === "Platters" && menu}</div>
