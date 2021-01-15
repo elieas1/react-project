@@ -7,7 +7,6 @@ function Staff() {
       <Card>
         <CardImg
           width="100%"
-          style={{ height: "40vh" }}
           src={
             "https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
           }

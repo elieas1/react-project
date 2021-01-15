@@ -10,48 +10,7 @@ import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import Contact from "./ContactComponent";
 import DishDetail from "./DishdetailComponent";
 import Aboutus from "./AboutComponent";
-import { connect } from "react-redux";
-import {
-  postComment,
-  postFeedback,
-} from "../redux/actionCreators";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
-const mapStateToProps = (state) => {
-  return {
-    dishes: state.dishes,
-    comments: state.comments,
-    promotions: state.promotions,
-    leaders: state.leaders,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  postComment: (dishId, rating, author, comment) => {
-    dispatch(postComment(dishId, rating, author, comment));
-  },
-  postFeedback: (
-    firstname,
-    lastname,
-    telnum,
-    email,
-    agree,
-    contactType,
-    message
-  ) => {
-    dispatch(
-      postFeedback(
-        firstname,
-        lastname,
-        telnum,
-        email,
-        agree,
-        contactType,
-        message
-      )
-    );
-  },
-});
 
 class Main extends Component {
   constructor() {
@@ -165,4 +124,4 @@ class Main extends Component {
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
+export default Main;

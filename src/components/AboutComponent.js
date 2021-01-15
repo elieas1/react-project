@@ -5,31 +5,11 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Media,
 } from "reactstrap";
-import { Loading } from "./LoadingComponene";
 import { Link } from "react-router-dom";
-import { baseUrl } from "../shared/baseUrl";
-import { Fade, Stagger } from "react-animation-components";
 
-const RenderLeader = (props) => {
-  const leaders = props.props.map((leader) => {
-    return (
-      <Fade in>
-        <Media>
-          <Media body>
-            <Media heading>{leader.name}</Media>
-            <p>{leader.designation}</p>
-            <p>{leader.description}</p>
-          </Media>
-        </Media>
-      </Fade>
-    );
-  });
-  return leaders;
-};
 
-function About(props) {
+function About() {
   return (
     <div className="container">
       <div className="row">

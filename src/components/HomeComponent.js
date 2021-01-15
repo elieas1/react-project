@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import Reserve from "./reserve";
 import Foods from "./Foods";
 import Staff from "./Staff";
 import Reviews from "./Reviews";
 
-function Home(props) {
+function Home() {
   return (
     <div className="container">
       <div className="Welcome">

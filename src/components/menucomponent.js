@@ -9,7 +9,7 @@ import {
   Nav,
   NavItem,
 } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Menu = (props) => {
   const [ type, setType ] = useState("Platters");
@@ -104,7 +104,7 @@ const Menu = (props) => {
           <div className="col menuType">
             <NavItem
               onClick={() => setType("Platters")}
-              className={type === "Platters" && "activeTab"}
+              className={type === "Platters" ? "activeTab":''}
               style={{
                 textAlign: "center",
                 padding: "10px 15px",
@@ -118,7 +118,7 @@ const Menu = (props) => {
           <div className="col menuType">
             <NavItem
               onClick={() => setType("Pizza")}
-              className={type === "Pizza" && "activeTab"}
+              className={type === "Pizza" ? "activeTab":''}
               style={{
                 textAlign: "center",
                 padding: "10px 15px",
@@ -132,7 +132,7 @@ const Menu = (props) => {
           <div className="col menuType">
             <NavItem
               onClick={() => setType("Salads")}
-              className={type === "Salads" && "activeTab"}
+              className={type === "Salads" ? "activeTab":''}
               style={{
                 textAlign: "center",
                 padding: "10px 15px",
@@ -146,7 +146,7 @@ const Menu = (props) => {
           <div className="col menuType">
             <NavItem
               onClick={() => setType("Desserts")}
-              className={type === "Desserts" && "activeTab"}
+              className={type === "Desserts" ? "activeTab":''}
               style={{
                 textAlign: "center",
                 padding: "10px 15px",

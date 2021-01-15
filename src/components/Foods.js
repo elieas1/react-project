@@ -7,7 +7,6 @@ function Foods() {
       <Card>
         <CardImg
           width="100%"
-          style={{ height: "40vh" }}
           src={
             "https://images.unsplash.com/photo-1464195643332-1f236b1c2255?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fHJlc3RhdXJhbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
           }
