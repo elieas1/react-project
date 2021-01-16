@@ -213,9 +213,9 @@ export const DESSERTS = [
   },
   {
     id: 2,
-    name: "Vanilla Ice-cream",
+    name: "Vanilla Ice Cream",
     image:
-      "https://media.gettyimages.com/photos/vanilla-ice-cream-with-chocolate-sauce-picture-id90076914?k=6&m=90076914&s=612x612&w=0&h=G63x5E2J3oWRchhEjnE2OljBuVdq5wLnvuseA_JTCZA=",
+      "https://images.pexels.com/photos/3625371/pexels-photo-3625371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     category: "Pizza",
     label: "",
     price: "9.99",

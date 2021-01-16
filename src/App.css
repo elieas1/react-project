@@ -112,6 +112,11 @@ address {
   border-bottom: 2px solid#19178A;
 }
 
+.menuDiv{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .menuType{
   padding: 0;
   transition: 200ms;
@@ -218,4 +223,10 @@ address {
   .logo{
     font-size: 5rem;
   }
+}
+
+@media screen and (min-width:768px){
+  .menuImages{
+  padding:0px 100px
+}
 }
