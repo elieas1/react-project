@@ -59,7 +59,7 @@ class Header extends React.Component {
         <div className="jumbotrone">
           <Navbar className="Navbar" dark expand="md">
             <div className="container">
-              <NavbarToggler onClick={this.toggleNav} />
+              <NavbarToggler onClick={this.toggleNav}><span className='fa fa-bars bars'></span></NavbarToggler>
               <Collapse isOpen={this.state.isNavOpen} navbar>
                 <Nav navbar>
                   <NavItem>
@@ -68,7 +68,8 @@ class Header extends React.Component {
                       className="nav-link"
                       to="/home"
                     >
-                      <span className="fa fa-home fa-lg"></span> Home
+                      <span className="fa fa-home fa-lg link"></span>
+                      <span className="linkText">Home</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -77,7 +78,8 @@ class Header extends React.Component {
                       className="nav-link"
                       to="/aboutus"
                     >
-                      <span className="fa fa-info fa-lg"></span> About Us
+                      <span className="fa fa-info fa-lg link"></span>{" "}
+                      <span className="linkText">About Us</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -88,9 +90,9 @@ class Header extends React.Component {
                     >
                       <span
                         className="fa
-                   fa-list fa-lg"
+                   fa-list fa-lg link"
                       ></span>
-                      &nbsp; Menu
+                      <span className="linkText">&nbsp; Menu</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -101,9 +103,9 @@ class Header extends React.Component {
                     >
                       <span
                         className="fa
-                   fa-address-card fa-lg"
+                   fa-address-card fa-lg link"
                       ></span>
-                      &nbsp;Contact Us
+                      <span className="linkText">&nbsp;Contact Us</span>
                     </NavLink>
                   </NavItem>
                 </Nav>
@@ -120,9 +122,18 @@ class Header extends React.Component {
           <div className="container">
             <div className="row">
               <div className=" col-12 header">
-                <h1 className='logo'>DINE & WINE</h1>
-                <p className='logotext'>We guarantee you an unforgettable experience</p>
-                <div className='d-none d-lg-flex' style={{ display: "flex", justifyContent: "center",flexWrap:'wrap' }}>
+                <h1 className="logo">DINE & WINE</h1>
+                <p className="logotext">
+                  We guarantee you an unforgettable experience
+                </p>
+                <div
+                  className="d-none d-lg-flex"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
                   {window.location.pathname.indexOf("/home") === 0 ? (
                     <>
                       <NavLink className="nav-link navlink" to="/menu">
@@ -132,7 +143,9 @@ class Header extends React.Component {
                         <div className="menuButton">Reserve Table</div>
                       </a>
                     </>
-                  ):<div className='emptyDiv'></div>}
+                  ) : (
+                    <div className="emptyDiv"></div>
+                  )}
                 </div>
               </div>
             </div>

@@ -23,7 +23,7 @@ function Reviews() {
     );
   });
 
-  return <div className='first'><h1>Reviews</h1>{rev}</div>;
+  return <div className='first'><h1>Hear From Our Clients</h1>{rev}</div>;
 }
 
 export default Reviews;

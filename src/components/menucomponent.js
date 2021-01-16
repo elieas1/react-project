@@ -22,7 +22,6 @@ const Menu = (props) => {
           <Link to={`/pizza/${one.id}`}>
             <CardImg
               width="100%"
-              style={{ height: "55vh" }}
               src={one.image}
               alt={one.name}
             />
@@ -44,7 +43,6 @@ const Menu = (props) => {
               width="100%"
               src={one.image}
               alt={one.name}
-              style={{ height: "55vh" }}
             />
             <CardImgOverlay>
               <CardTitle style={{ color: "white" }}>{one.name}</CardTitle>
@@ -64,7 +62,6 @@ const Menu = (props) => {
               width="100%"
               src={dish.image}
               alt={dish.name}
-              style={{ height: "55vh" }}
             />
             <CardImgOverlay>
               <CardTitle style={{ color: "white" }}>{dish.name}</CardTitle>
@@ -84,7 +81,6 @@ const Menu = (props) => {
               width="100%"
               src={dish.image}
               alt={dish.name}
-              style={{ height: "55vh" }}
             />
             <CardImgOverlay>
               <CardTitle style={{ color: "white" }}>{dish.name}</CardTitle>

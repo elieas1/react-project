@@ -65,6 +65,26 @@ address {
   background-color: rgba(150, 150, 150, 0);
 }
 
+.linkText{
+  color:white;
+  transition: 200ms;
+}
+
+.link{
+  color: white;
+}
+
+.linkText:hover{
+  color:red
+}
+
+.nav-link:focus .linkText{
+  color:red
+}
+
+.bars{
+  color:white
+}
 
 .page-enter {
   opacity: 0.01;
@@ -94,6 +114,12 @@ address {
 
 .menuType{
   padding: 0;
+  transition: 200ms;
+  width: 100px;
+}
+
+.menuType:hover{
+  letter-spacing:1px;
 }
 
 .menuButton {
