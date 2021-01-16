@@ -18,7 +18,6 @@ function Home() {
       </div>
       <Reviews />
       <hr />
-      <Reserve />
     </div>
   );
 }

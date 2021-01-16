@@ -153,9 +153,6 @@ const Menu = (props) => {
         {type === "Salads" && <div className="menuDiv">{SaladMenu}</div>}
         {type === "Desserts" && <div className="menuDiv">{dessertmenu}</div>}
       </div>
-      <div className="container">
-        <Reserve />
-      </div>
     </>
   );
 };
